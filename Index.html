@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFRICAN GIST - One Page Blog Sample</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#dc2626',
+              dark: '#111827',
+            }
+          },
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Breaking ticker -->
+  <div class="bg-gray-900 text-white py-2 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 flex items-center">
+      <span class="bg-red-600 text-xs font-black px-2 py-1 rounded uppercase shrink-0">Breaking</span>
+      <div class="ml-3 overflow-hidden flex-1">
+        <div class="whitespace-nowrap animate-marquee">
+          <span class="text-sm font-medium mx-8">★ Afrobeats album nominated for Grammy Album of the Year</span>
+          <span class="text-sm font-medium mx-8">★ Nollywood box office hits ₦5 billion in first half of 2025</span>
+          <span class="text-sm font-medium mx-8">★ African Union announces visa-free travel for creatives</span>
+          <span class="text-sm font-medium mx-8">★ Popular Lagos nightclub shut down after viral brawl</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md border-b-4 border-red-600">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="bg-red-600 text-white font-black text-xl px-3 py-1.5 rounded">AG</div>
+        <div>
+          <h1 class="text-2xl font-black tracking-tight">AFRICAN <span class="text-red-600">GIST</span></h1>
+          <p class="text-[10px] text-gray-500 font-bold tracking-widest uppercase">Entertainment & Breaking News</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm font-bold text-gray-700">
+        <a href="#" class="hover:text-red-600">Home</a>
+        <a href="#" class="hover:text-red-600">Entertainment</a>
+        <a href="#" class="hover:text-red-600">Music</a>
+        <a href="#" class="hover:text-red-600">Movies</a>
+        <a href="#" class="hover:text-red-600">Fashion</a>
+      </nav>
+      <button class="px-4 py-2 bg-red-600 text-white text-sm font-bold rounded hover:bg-red-700">Subscribe</button>
+    </div>
+  </header>
+
+  <!-- Date Banner -->
+  <div class="bg-red-700 text-white border-b border-red-800">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:block"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+      <span class="text-sm sm:text-base font-black tracking-wide uppercase">Today is Tuesday, June 23rd 2026</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-gray-900 to-red-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="inline-block bg-red-600/20 text-red-300 px-4 py-1 rounded-full text-sm font-bold mb-4">Welcome to AFRICAN GIST</span>
+        <h2 class="text-4xl md:text-5xl font-black leading-tight mb-5">The Hottest <span class="text-red-400">African Gist</span>, All Day, Every Day</h2>
+        <p class="text-lg text-gray-300 mb-6">Your one-page, endlessly scrolling entertainment hub. Built to feel like Facebook and hit like Yabaleftonline.</p>
+        <div class="flex gap-4">
+          <a href="#feed" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition">Start Reading</a>
+          <a href="#mentor" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg border border-white/20 transition">Meet The Mentor</a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="bg-white p-2 rounded-2xl shadow-2xl max-w-sm">
+          <img src="./personal img.jpeg" alt="Erinma" class="w-full rounded-xl aspect-[3/4] object-cover">
+          <div class="p-3 text-center">
+            <p class="font-black text-gray-900 text-lg">Erinma Founder</p>
+            <p class="text-red-600 font-bold text-sm">Founder & Editor, AFRICAN GIST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured stories -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex items-center gap-2 mb-6">
+      <div class="h-7 w-1.5 bg-red-600 rounded"></div>
+      <h3 class="text-2xl font-black">Featured Stories</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Card 1 -->
+      <article class="md:col-span-2 bg-white rounded-xl shadow border border-gray-200 overflow-hidden group">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/1763062/pexels-photo-1763062.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Music" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-black px-2 py-1 rounded uppercase">Music</span>
+        </div>
+        <div class="p-5">
+          <h4 class="text-xl font-black mb-2 group-hover:text-red-600 transition">Davido Makes History: First African Artist To Sell Out 50,000-Seat Arena</h4>
+          <p class="text-gray-600 text-sm line-clamp-2">The Afrobeats superstar continues his global takeover as fans scramble for tickets.</p>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden group">
+        <div class="relative overflow-hidden">
+          <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Celeb" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-black px-2 py-1 rounded uppercase">Celeb Gist</span>
+        </div>
+        <div class="p-5">
+          <h4 class="text-lg font-black mb-2 group-hover:text-red-600 transition">Burna Boy Spotted In Lagos With Mystery Woman</h4>
+          <p class="text-gray-600 text-sm line-clamp-2">The African Giant was seen leaving an exclusive restaurant last night.</p>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="md:col-span-3 bg-white rounded-xl shadow border border-gray-200 overflow-hidden group">
+        <div class="md:flex">
+          <div class="md:w-1/2 relative overflow-hidden">
+            <img src="https://images.pexels.com/photos/7991158/pexels-photo-7991158.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Movies" class="w-full h-64 md:h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-black px-2 py-1 rounded uppercase">Movies</span>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center">
+            <h4 class="text-2xl font-black mb-3 group-hover:text-red-600 transition">Netflix Announces $1 Billion Investment In Nollywood Originals</h4>
+            <p class="text-gray-600 mb-4">Streaming giant Netflix has promised to fund over 200 original Nigerian films and series over the next five years. This is the biggest deal in African entertainment history.</p>
+            <a href="#" class="text-red-600 font-black text-sm hover:underline">READ FULL STORY →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Main feed + sidebar -->
+  <main id="feed" class="max-w-7xl mx-auto px-4 py-6">
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Feed -->
+      <div class="lg:col-span-2 space-y-5">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="h-7 w-1.5 bg-red-600 rounded"></div>
+          <h3 class="text-2xl font-black">Latest Gist</h3>
+        </div>
+
+        <!-- Post 1 -->
+        <article class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
+          <div class="p-4 flex items-center gap-3">
+            <img src="./personal img.jpeg" alt="Erinma" class="w-10 h-10 rounded-full object-cover border-2 border-red-100">
+            <div>
+              <p class="text-sm font-bold">AFRICAN GIST</p>
+              <p class="text-xs text-gray-500">Erinma • 4 hours ago</p>
+            </div>
+          </div>
+          <div class="px-4 pb-3">
+            <span class="text-xs font-black text-red-600 uppercase">Celeb Gist</span>
+            <h3 class="text-xl font-black mt-1 mb-2">Burna Boy Spotted In Lagos With Mystery Woman</h3>
+            <p class="text-gray-600 text-sm line-clamp-3">The African Giant was seen leaving an exclusive Victoria Island restaurant last night, and the internet has already turned detective. Who is she? We have the exclusive details.</p>
+          </div>
+          <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Post" class="w-full h-64 object-cover">
+          <div class="p-3 flex justify-between text-sm text-gray-600 border-t">
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">❤️ Like</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">💬 Comment</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">🔗 Share</button>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
+          <div class="p-4 flex items-center gap-3">
+            <img src="personal img.jpeg" auto=compress&cs=tinysrgb&w=200 alt="Erinma" class="w-10 h-10 rounded-full object-cover border-2 border-red-100">
+            <div>
+              <p class="text-sm font-bold">AFRICAN GIST</p>
+              <p class="text-xs text-gray-500">Erinma • 6 hours ago</p>
+            </div>
+          </div>
+          <div class="px-4 pb-3">
+            <span class="text-xs font-black text-red-600 uppercase">Movies</span>
+            <h3 class="text-xl font-black mt-1 mb-2">Netflix Announces $1 Billion Investment In Nollywood Originals</h3>
+            <p class="text-gray-600 text-sm line-clamp-3">Streaming giant Netflix has promised to fund over 200 original Nigerian films and series. This is the biggest deal in African entertainment history.</p>
+          </div>
+          <img src="https://images.pexels.com/photos/7991158/pexels-photo-7991158.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Post" class="w-full h-64 object-cover">
+          <div class="p-3 flex justify-between text-sm text-gray-600 border-t">
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">❤️ Like</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">💬 Comment</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">🔗 Share</button>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
+          <div class="p-4 flex items-center gap-3">
+            <img src="personal img.jpeg" alt="Erinma" class="w-10 h-10 rounded-full object-cover border-2 border-red-100">
+            <div>
+              <p class="text-sm font-bold">AFRICAN GIST</p>
+              <p class="text-xs text-gray-500">Erinma • 10 hours ago</p>
+            </div>
+          </div>
+          <div class="px-4 pb-3">
+            <span class="text-xs font-black text-red-600 uppercase">Fashion</span>
+            <h3 class="text-xl font-black mt-1 mb-2">Lagos Fashion Week 2025: Bold Colors And Ankara Prints Steal The Show</h3>
+            <p class="text-gray-600 text-sm line-clamp-3">From emerging designers to international celebrities, Lagos became the centre of African fashion this weekend.</p>
+          </div>
+          <img src="https://images.pexels.com/photos/36587080/pexels-photo-36587080/free-photo-of-elegant-woman-in-red-dress-with-yellow-van.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Post" class="w-full h-64 object-cover">
+          <div class="p-3 flex justify-between text-sm text-gray-600 border-t">
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">❤️ Like</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">💬 Comment</button>
+            <button class="flex-1 py-2 hover:bg-gray-100 rounded font-bold">🔗 Share</button>
+          </div>
+        </article>
+
+        <button class="w-full py-3 bg-white border-2 border-red-600 text-red-600 font-black rounded-lg hover:bg-red-600 hover:text-white transition">
+          Load More Gist ↓
+        </button>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        <!-- Trending -->
+        <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
+          <div class="bg-gray-900 text-white px-4 py-3 font-black flex items-center gap-2">
+            <span class="text-red-500">★</span> Trending Now
+          </div>
+          <div class="divide-y">
+            <a href="#" class="block p-4 hover:bg-red-50 transition">
+              <p class="text-sm font-bold hover:text-red-600 transition line-clamp-2">Burna Boy Spotted In Lagos With Mystery Woman</p>
+              <p class="text-xs text-gray-500 mt-1">Celeb Gist • 4h ago</p>
+            </a>
+            <a href="#" class="block p-4 hover:bg-red-50 transition">
+              <p class="text-sm font-bold hover:text-red-600 transition line-clamp-2">Davido Sells Out 50,000-Seat Arena In Under 2 Hours</p>
+              <p class="text-xs text-gray-500 mt-1">Music • 2h ago</p>
+            </a>
+            <a href="#" class="block p-4 hover:bg-red-50 transition">
+              <p class="text-sm font-bold hover:text-red-600 transition line-clamp-2">Victor Osimhen Transfer Saga Heats Up</p>
+              <p class="text-xs text-gray-500 mt-1">Sports • 12h ago</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="bg-white rounded-xl shadow border border-gray-200 p-4">
+          <h4 class="font-black mb-3">Explore Topics</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Music</span>
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Movies</span>
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Fashion</span>
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Celeb Gist</span>
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Sports</span>
+            <span class="px-3 py-1 bg-gray-100 text-xs font-bold rounded-full">Food</span>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="bg-red-600 rounded-xl shadow-lg p-5 text-white">
+          <h4 class="font-black text-lg mb-2">Gist In Your Inbox</h4>
+          <p class="text-sm text-red-100 mb-4">Join 50,000+ readers. Get the hottest African entertainment news daily.</p>
+          <input type="email" placeholder="Your email" class="w-full px-3 py-2 rounded text-gray-900 text-sm mb-2">
+          <button class="w-full py-2 bg-gray-900 text-white text-sm font-black rounded hover:bg-gray-800">Subscribe Free</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Mentor section -->
+  <section id="mentor" class="bg-gray-50 py-14 border-t">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="inline-block bg-red-100 text-red-700 px-4 py-1 rounded-full text-sm font-black mb-3">From Your Mentor</span>
+        <h3 class="text-3xl font-black mb-3">Blogging 101 With Erinma</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto">Starting a blog can feel overwhelming, but you are not alone. Here are the lessons every beginner should know.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-6 shadow border border-gray-200">
+          <h4 class="font-black text-lg mb-2">Pick A Niche You Love</h4>
+          <p class="text-gray-600 text-sm">AFRICAN GIST works because African entertainment is exciting. Choose topics you can talk about even when no one is paying you.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow border border-gray-200">
+          <h4 class="font-black text-lg mb-2">Post Consistently</h4>
+          <p class="text-gray-600 text-sm">Your first posts will not be perfect. Aim to publish regularly. Momentum beats perfection every time.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow border border-gray-200">
+          <h4 class="font-black text-lg mb-2">Headlines Are Everything</h4>
+          <p class="text-gray-600 text-sm">On a feed-style blog, people scroll fast. Your headline must make them stop. Be clear, curious, and a little bold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h2 class="text-2xl font-black text-white mb-3">AFRICAN <span class="text-red-600">GIST</span></h2>
+          <p class="text-sm text-gray-400">Your daily dose of African entertainment, gossip, music, movies, and breaking news.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-black mb-3">Categories</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-red-500">Music</a></li>
+            <li><a href="#" class="hover:text-red-500">Movies</a></li>
+            <li><a href="#" class="hover:text-red-500">Fashion</a></li>
+            <li><a href="#" class="hover:text-red-500">Celeb Gist</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-black mb-3">Quick Links</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-red-500">About</a></li>
+            <li><a href="#" class="hover:text-red-500">Contact</a></li>
+            <li><a href="#" class="hover:text-red-500">Advertise</a></li>
+            <li><a href="#" class="hover:text-red-500">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-black mb-3">Newsletter</h4>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Email" class="flex-1 px-3 py-2 bg-gray-900 border border-gray-800 rounded text-sm">
+            <button class="px-4 py-2 bg-red-600 text-white text-sm font-black rounded hover:bg-red-700">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-900 pt-6 text-center text-xs text-gray-500">
+        <p>© 2026 AFRICAN GIST. Built By Erinma Fortunate.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
