@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFRICAN GIST - Blog by Erinma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gist-red': '#C8102E',
+                        'gist-dark': '#0F0F0F',
+                        'gist-gray': '#1A1A1A',
+                        'gist-light': '#F5F5F5',
+                        'gist-accent': '#FF6B35',
+                        'gist-gold': '#D4AF37',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0F0F0F; color: #fff; }
+        .hero-overlay { background: linear-gradient(135deg, rgba(200,16,46,0.85) 0%, rgba(15,15,15,0.95) 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(200,16,46,0.2); }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .gradient-text { background: linear-gradient(90deg, #C8102E, #FF6B35); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .read-more-btn { position: relative; overflow: hidden; }
+        .read-more-btn::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #C8102E; transition: width 0.3s ease; }
+        .read-more-btn:hover::after { width: 100%; }
+        .sticky-nav { backdrop-filter: blur(20px); background: rgba(15,15,15,0.9); }
+        .date-bar { background: linear-gradient(90deg, #C8102E, #8B0000); }
+    </style>
+<base target="_blank">
+</head>
+<body class="antialiased">
+
+    <!-- Bold Date Bar -->
+    <div class="date-bar w-full py-3 px-4 text-center border-b-2 border-gist-gold">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-4">
+            <i class="fas fa-calendar-alt text-white/80 text-lg"></i>
+            <span class="text-white font-black text-xl md:text-2xl tracking-wide uppercase">
+                Tuesday, June 23rd, 2026
+            </span>
+            <span class="hidden sm:inline-block px-3 py-1 bg-white/20 rounded-full text-white text-xs font-bold">
+                TODAY
+            </span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky-nav sticky top-0 w-full z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gist-red rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">A</span>
+                    </div>
+                    <span class="text-2xl font-black tracking-tight text-white">AFRICAN<span class="text-gist-red">GIST</span></span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#" class="text-sm font-medium text-white hover:text-gist-red transition">Home</a>
+                    <a href="#" class="text-sm font-medium text-gray-400 hover:text-gist-red transition">News</a>
+                    <a href="#" class="text-sm font-medium text-gray-400 hover:text-gist-red transition">Entertainment</a>
+                    <a href="#" class="text-sm font-medium text-gray-400 hover:text-gist-red transition">Lifestyle</a>
+                    <a href="#" class="text-sm font-medium text-gray-400 hover:text-gist-red transition">Culture</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 text-gray-400 hover:text-white transition"><i class="fas fa-search"></i></button>
+                    <button class="hidden sm:block px-5 py-2 bg-gist-red text-white text-sm font-semibold rounded-full hover:bg-red-700 transition">Subscribe</button>
+                    <button class="md:hidden p-2 text-white"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="personal img.jpeg" alt="Background" class="w-full h-full object-cover opacity-30">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span class="text-sm font-medium text-gray-300">Welcome to my blog</span>
+                    </div>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6">
+                        AFRICAN<br>
+                        <span class="gradient-text">GIST</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-4 font-light">
+                        Your daily dose of authentic African stories, culture, and trending news — curated by <span class="text-white font-semibold">Erinma</span>.
+                    </p>
+                    <p class="text-gray-400 mb-8 max-w-lg">
+                        From breaking news to entertainment, lifestyle tips to cultural deep-dives. Everything African, all in one place.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="px-8 py-4 bg-gist-red text-white font-bold rounded-full hover:bg-red-700 transition shadow-lg shadow-red-500/30">
+                            Start Reading <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="px-8 py-4 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition">
+                            <i class="fas fa-play-circle mr-2"></i> About Erinma
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="flex gap-8 mt-12 pt-8 border-t border-white/10">
+                        <div>
+                            <div class="text-3xl font-bold text-white">50K+</div>
+                            <div class="text-sm text-gray-400">Readers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">1.2K</div>
+                            <div class="text-sm text-gray-400">Articles</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">200+</div>
+                            <div class="text-sm text-gray-400">Stories</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image (Erinma's Portrait) -->
+                <div class="relative">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-gist-red to-gist-accent rounded-3xl opacity-20 blur-2xl"></div>
+                        <div class="relative bg-gist-gray rounded-3xl p-2 border border-white/10">
+                            <img src="personal img.jpeg" alt="Erinma - Founder of African Gist" class="w-full h- object-cover rounded-2xl">
+                            <div class="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md rounded-xl p-4 border border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-gist-red rounded-full flex items-center justify-center text-white font-bold text-lg">E</div>
+                                    <div>
+                                        <div class="text-white font-bold">Erinma</div>
+                                        <div class="text-sm text-gray-300">Founder & Editor-in-Chief</div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full">Online</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center pt-2">
+                <div class="w-1.5 h-3 bg-white rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Topics Bar -->
+    <section class="bg-gist-gray border-y border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 overflow-x-auto scrollbar-hide">
+                <span class="text-gist-red font-bold text-sm whitespace-nowrap flex items-center gap-2">
+                    <i class="fas fa-fire"></i> TRENDING:
+                </span>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#Afrobeats</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#Nollywood</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#AfricanFashion</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#TechInAfrica</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#FoodCulture</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white whitespace-nowrap transition">#TravelAfrica</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Section Header -->
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-2">Latest Stories</h2>
+                <p class="text-gray-400">Fresh updates from across the continent</p>
+            </div>
+            <div class="hidden sm:flex gap-2">
+                <button class="px-4 py-2 bg-gist-red text-white text-sm font-medium rounded-lg">All</button>
+                <button class="px-4 py-2 bg-gist-gray text-gray-400 text-sm font-medium rounded-lg hover:text-white transition">News</button>
+                <button class="px-4 py-2 bg-gist-gray text-gray-400 text-sm font-medium rounded-lg hover:text-white transition">Entertainment</button>
+                <button class="px-4 py-2 bg-gist-gray text-gray-400 text-sm font-medium rounded-lg hover:text-white transition">Lifestyle</button>
+            </div>
+        </div>
+
+        <!-- Featured Article (Large) -->
+        <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5 mb-10">
+            <div class="grid md:grid-cols-2">
+                <div class="relative h-64 md:h-auto">
+                    <img src="Images/LAGOS FASHION.jpeg" alt="Featured" class="w-full h-60 object-cover">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 bg-gist-red text-white text-xs font-bold rounded-full">FEATURED</span>
+                    </div>
+                </div>
+                <div class="p-8 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-gist-red/20 text-gist-red text-xs font-semibold rounded-full">Culture</span>
+                        <span class="text-gray-500 text-sm">5 min read</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                        The Rise of African Street Fashion: How Lagos is Redefining Global Style
+                    </h3>
+                    <p class="text-gray-400 mb-6 line-clamp-3">
+                        From the bustling markets of Balogun to the runways of Paris, African street fashion has taken the world by storm. Discover how young Nigerian designers are blending traditional Ankara prints with modern silhouettes to create a fashion revolution that is uniquely African and globally celebrated.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="personal img.jpeg"" alt="Erinma" class="w-10 h-10 rounded-full object-cover border-2 border-gist-red">
+                            <div>
+                                <div class="text-sm font-semibold text-white">Erinma</div>
+                                <div class="text-xs text-gray-500">Jun 23, 2026</div>
+                            </div>
+                        </div>
+                        <button class="read-more-btn text-gist-red font-semibold text-sm flex items-center gap-2">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Article Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Article 1 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="Images/BURNABOY.jpeg" alt="Article" class="w-full h- object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-gist-accent text-white text-xs font-bold rounded-full">Entertainment</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        Burna Boy's New Album Breaks Streaming Records Across Africa
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        The African Giant continues his reign as his latest project dominates charts in over 30 countries within the first week of release.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 3 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 12K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="Images/FINTECH.jpeg" alt="Article" class="w-full h- object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">Tech</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        Nigeria's Fintech Revolution: How Startups Are Changing Banking Forever
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        With over 200 fintech companies operating in Lagos alone, the financial landscape of Africa's largest economy is transforming rapidly.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 6 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 8.5K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="https://images.unsplash.com/photo-1545167496-31b3aa75296c?w=600&q=80" alt="Article" class="w-full h-full object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full">Lifestyle</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        10 Must-Visit Hidden Gems in East Africa Before Everyone Else Discovers Them
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        From the turquoise waters of Zanzibar to the untouched beauty of Rwanda's countryside, these destinations will take your breath away.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 4 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 15K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="Images/JOLLOF WAR.jpeg" alt="Article" class="w-full h- object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">Food</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        Jollof Wars: Why Ghanaian and Nigerian Jollof Rice Will Always Be Rivals
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        The age-old debate continues as food critics from across the continent weigh in on which country truly makes the best Jollof rice.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 5 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 22K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="Images/AFRICAN UNION Jpg.jpeg" alt="Article" class="w-full h- object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-gist-red text-white text-xs font-bold rounded-full">News</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        African Union Summit 2026: Key Decisions That Will Shape the Continent
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        Leaders from 55 African nations gathered to discuss trade agreements, climate action, and the future of the African Continental Free Trade Area.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 7 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 31K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="card-hover bg-gist-gray rounded-2xl overflow-hidden border border-white/5">
+                <div class="relative h-48">
+                    <img src="Images/ACCRA WEDDING .jpeg" alt="Article" class="w-full h- object-cover">
+                    <div class="absolute top-3 left-3">
+                        <span class="px-3 py-1 bg-gist-gold text-black text-xs font-bold rounded-full">Celebrities</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 line-clamp-2 hover:text-gist-red transition cursor-pointer">
+                        Inside the Lavish Wedding That Shut Down Accra for Three Days
+                    </h3>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">
+                        When two of Ghana's biggest celebrities tied the knot, the entire nation celebrated. Here's an exclusive look at the ceremony.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <div class="flex items-center gap-2">
+                            <img src="personal img.jpeg" alt="Erinma" class="w-8 h-8 rounded-full object-cover">
+                            <span class="text-xs text-gray-400">Erinma</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 text-xs">
+                            <span><i class="far fa-clock mr-1"></i> 4 min</span>
+                            <span><i class="far fa-eye mr-1"></i> 45K</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button class="px-8 py-4 bg-gist-gray border border-white/10 text-white font-semibold rounded-full hover:bg-white/5 hover:border-gist-red transition flex items-center gap-2 mx-auto">
+                <span>Load More Stories</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gist-gray border-y border-white/5 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="w-16 h-16 bg-gist-red/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-envelope-open-text text-gist-red text-2xl"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Never Miss a Story</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">
+                Join 50,000+ readers who get the latest African news, culture, and entertainment delivered straight to their inbox every morning.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-4 bg-gist-dark border border-white/10 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-gist-red transition">
+                <button class="px-8 py-4 bg-gist-red text-white font-bold rounded-full hover:bg-red-700 transition whitespace-nowrap">
+                    Subscribe Now
+                </button>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- About Erinma Section -->
+    <section class="py-16">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-gist-gray rounded-3xl p-8 md:p-12 border border-white/5">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-1">
+                        <div class="relative">
+                            <div class="absolute -inset-2 bg-gradient-to-br from-gist-red to-gist-accent rounded-2xl opacity-30 blur-lg"></div>
+                            <img src="personal img.jpeg" alt="Erinma" class="relative w-full h-full object-cover rounded-2xl border-2 border-white/10">
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <span class="text-gist-red font-bold text-sm tracking-wider uppercase">About the Author</span>
+                        <h2 class="text-3xl font-bold text-white mt-2 mb-4">Meet Erinma</h2>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Hi there! I'm Erinma, the founder and voice behind <strong class="text-white">AFRICAN GIST</strong>. Born and raised in the heart of Nigeria, I've always been passionate about telling the stories that matter — the ones that celebrate our culture, highlight our achievements, and spark meaningful conversations.
+                        </p>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            What started as a small personal blog has grown into a community of thousands of readers who share my love for all things African. From breaking news to lifestyle tips, from entertainment gossip to cultural deep-dives, I'm here to keep you informed, entertained, and inspired.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-gist-red hover:text-white transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-gist-red hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-gist-red hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-gist-red hover:text-white transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gist-dark border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gist-red rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <span class="text-xl font-black text-white">AFRICAN<span class="text-gist-red">GIST</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-4">
+                        Your trusted source for African news, entertainment, culture, and lifestyle. Telling our stories, our way.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">News</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Entertainment</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Lifestyle</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Culture</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Tech</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Advertise</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-gist-red text-sm transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-600 text-sm">© 2026 AFRICAN GIST. All rights reserved. Created with ❤️ by Erinma.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Mobile) -->
+    <button class="fixed bottom-6 right-6 w-14 h-14 bg-gist-red rounded-full shadow-lg shadow-red-500/40 flex items-center justify-center text-white hover:bg-red-700 transition z-50 md:hidden">
+        <i class="fas fa-plus text-xl"></i>
+    </button>
+
+</body>
+</html>

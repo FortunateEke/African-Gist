@@ -1,32 +1,11 @@
 @import "tailwindcss";
 
-/* Custom utilities for AFRICAN GIST */
-@layer utilities {
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+@theme {
+  --color-gist-red: #D9232E;
+  --color-gist-dark: #0F0F0F;
+  --color-gist-orange: #FF6B00;
 }
 
-/* Breaking news marquee animation */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -37,18 +16,41 @@
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 25s linear infinite;
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible {
-  outline: 2px solid #dc2626;
-  outline-offset: 2px;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
